@@ -1,0 +1,41 @@
+/* Global =============================== */
+:root {
+    --bg-color: #363b46;
+    --dark-gray: #222;
+    --card-bg-gray: #2c303a;
+    --card-border-gray: #373b46;
+    --gray: #aca6a6;
+    --table-color: #a6adcc;
+    --white: #FFF;
+    --titles: #dadada;
+    --light-blue: #4484FF;
+    --light-purple: #914EFF;
+}
+
+::-webkit-scrollbar {
+    background: var(--bg-color);
+    width: .8rem;
+    height: .8rem;
+    padding: 0.2rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--gray);
+    border: 3px solid var(--bg-color);
+    border-radius: .5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 93.75%; /* 15px */
+}
+
+body {
+    background: var(--bg-color);
+    font-family: SF Pro Display, sans-serif;
+}

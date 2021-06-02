@@ -1,0 +1,213 @@
+
+
+/* Estratégia para esconder os títulos do layout mas de uma forma que não atrapalhe os leitores de tela */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap
+}
+
+.container {
+    width: min(90vw, 800px);
+    margin: auto;
+}
+
+/* Alerts #======================== errors or success */
+#success {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    transition: all .3s;
+} 
+
+#success.active {
+    opacity: 1;
+    position: absolute;
+    z-index: 100;
+    left: 1rem;
+    top: 1rem;
+    width: auto;
+    height: auto;
+    font-size: .8em;
+    padding: 0.3rem;
+    display: inline-block;
+    visibility: visible;
+    background-color: #26f16a25;
+    color: #26f16ab9;
+    border: 1px solid #26f16ab9;
+    border-radius: 2px;
+    box-shadow: 5px 15px 10px rgba(24, 24, 24, 0.568);
+    transition: all .3s;
+}
+
+#error {
+    display: none;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#error.active {
+    width: auto;
+    height: auto;
+    font-size: 80%;
+    display: inline-block;
+    visibility: visible;
+    background-color: #e6411834;
+    color: #f84d22be;
+    border-radius: 2px;
+    border: 1px solid #e6411859;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Titles =============================== */
+h2 {
+  margin-top: 3.2rem;
+  margin-bottom: 0.8rem;  
+  color: var(--dark-blue);
+  font-weight: 500;
+}
+
+/* Header =============================== */
+header {
+    background: var(--dark-gray);
+    padding: 2rem 0 10rem;
+    text-align: center;
+}
+
+/* Balance =============================== */
+#balance {
+    margin-top: -6rem;
+}
+
+#balance h2 {
+    color: var(--white);
+    margin-top:0;  
+
+}
+
+/* Cards =============================== */
+.card {
+    background: var(--card-bg-gray);
+    padding: 1.5rem 2rem;
+    border-radius: .5rem;
+    border: 0.5px solid var(--card-border-gray);
+    margin-bottom: 1.5rem;
+}
+
+.card h3 {
+    font-weight: normal;
+    font-size: 1rem;
+    color: var(--titles);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card p {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-top: 1rem;
+    color: var(--white);
+}
+
+.card.total {
+    background: linear-gradient(15deg, #914EFF 0%, #4484FF 100%);
+    transition: all ease-in-out .2s;
+}
+.card.total:hover {
+    background: linear-gradient(-15deg, #914EFF 0%, #4484FF 100%);
+}
+
+.card.total h3 {
+    color: #222;
+    font-weight: 500;
+}
+
+.card.total p {
+    color: #111;
+    font-weight: 500;
+}
+
+/* Table =============================== */
+section#transaction {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+section#transaction h2 {
+    color: white;
+}
+#data-table {
+    width: 100%;
+    border-spacing: 0 0.5rem;
+    color: var(--table-color);
+}
+
+table thead tr th:first-child,
+table tbody tr td:first-child {
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+table thead tr th:last-child,
+table tbody tr td:last-child {
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+
+table tbody tr {
+    opacity: .7;
+}
+table tr:hover {
+    opacity: 1;
+}
+
+table th {
+    background:#2c303a;
+    opacity: .6;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    text-align: left;
+}
+
+table td{
+    background: #3d434e;
+    padding: 1rem 2rem;
+    font-weight: 500;
+}
+
+td.description {
+    color: white;
+}
+
+td.income {
+    color: #12a454;
+}
+
+td.expense {
+    color: #f83e3e;
+}
+
+td img.deleteTransaction {
+    cursor: pointer;
+}
+
+
+/* Footer =============================== */
+footer {
+    text-align: center;
+    color: #dadada;
+    padding: 5rem 0 5rem;
+    font-weight: 200;
+    opacity: .6;
+}
+

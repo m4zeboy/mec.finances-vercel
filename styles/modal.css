@@ -1,0 +1,82 @@
+/* Modal =============================== */
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+
+    top: 0;
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all ease .3s ;
+}
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+.modal {
+    background: var(--card-bg-gray);
+    border: 1px solid var(--card-border-gray);
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.219);
+    border-radius: 0.5rem;
+    padding: 2.4rem;
+    width: 90%;
+    max-width: 524px;
+}
+
+/* Form =============================== */
+#form {
+    max-width: 500px;
+}
+
+#form h2 {
+    color: var(--titles);
+    margin-top: 0;
+}
+
+input {
+    outline: none;
+    border: none;
+    border-radius: 0.25rem;
+    width: 100%;
+    background-color: #363b46;
+    padding: 1.2rem 0.8rem;
+    color: white;
+}
+
+input:focus {
+    outline-color: #363b46;
+    outline-style: auto;
+    outline-width: 3px;
+}
+
+.input-group {
+    margin-top: 1rem;
+}
+
+.input-group small {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #aca6a6;
+    opacity: .7;
+}
+
+.input-group.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group.actions a.button,
+.input-group.actions button {
+    width: 48%;
+}

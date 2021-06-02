@@ -1,0 +1,61 @@
+/* Links & Buttons =============================== */
+a {
+    color: var(--table-color);
+    text-decoration: none;
+}
+
+.button.new {
+    display: inline-block;
+    margin-bottom: 1rem;
+    border: 1px solid #a6adcc56;
+    border-radius: 2px;
+    padding: 0.5rem;
+    transition: all ease .2s;
+}
+
+.button.new:hover {
+    background-color: #a6adcc;
+    color: var(--bg-color);
+
+}
+
+button {
+    width: 100%;
+    height: 4rem;
+    color: white;
+    background: var(--light-blue);
+    border: 1px solid #3073f1;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all ease-in-out .15s;
+}
+
+button:hover {
+    background: #3073f1;
+}
+
+.button.cancel {
+    color: #e92929;
+    border: 2px solid #e92929;
+    height: 4rem;
+    border-radius: 0.25rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.4;
+    transition: all ease-in-out .15s;
+
+}
+
+.button.cancel:hover {
+    opacity: 1;
+}
+
+.rocketseat {
+    color: #914EFF;
+}
+.rocketseat:hover {
+    text-decoration: underline;
+
+}
